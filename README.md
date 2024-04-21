@@ -1,2 +1,1 @@
-# Team24_assignment3_Pattern1
-Team24_assignment3_Pattern1
+Team 24 Project 3 - FoodOrderPickup 
