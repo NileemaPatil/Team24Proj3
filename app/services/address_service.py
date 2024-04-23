@@ -9,13 +9,12 @@ from ..models.address_model import Address
 from ..schemas.address_schema import address_schema, addresss_schema
 
 
-def create_project(data, current_user):
+def create_address(data, current_user):
     new_address = Address(
         addressid=data['addressid'],
         userid=data['userid'],
         typeofaddress=data['typeofaddress'],
         address_desc=data['address_desc'],
-        remarks=data['remarks'],
         createddate=datetime.datetime.now(),
         updateddate=datetime.datetime.now()
     )

@@ -12,4 +12,4 @@ class Project(db.Model):
     address_desc = db.Column(db.String(120), nullable=False)
     createddate = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     updateddate = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    remarks = db.Column(db.String(120), nullable=True)
+

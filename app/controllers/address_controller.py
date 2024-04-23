@@ -5,7 +5,7 @@ from ..services.project_service import create_project, get_projects_by_language,
 from ..schemas.project_schema import project_schema, projects_schema
 from ..services.user_service import get_user_role, get_user_userStatus
 from ..services.address_service import create_address, get_address
-from ..schemas.address_schema import address_schema, address_schema
+from ..schemas.address_schema import address_schema, addresss_schema
 
 address_blueprint = Blueprint('address_blueprint', __name__)
 
