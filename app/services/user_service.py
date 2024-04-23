@@ -4,8 +4,8 @@ from ..models.user_model import User
 
 def create_user(data):
     hashed_password = bcrypt.generate_password_hash(data['password']).decode('utf-8')
-    new_user = User(name=data['name'], email=data['email'], password=hashed_password, language=data['language'],
-                    role=data['role'])
+    new_user = User(username=data['username'],firstname=data['firstname'],lastname=data['lastname'], mobileno=data['mobileno'], email=data['email'],aadharID=data['aadharID'], userrole=data['userrole'], userStatus=data['userStatus'],  password=hashed_password,
+                    remarks=data['remarks'])
     db.session.add(new_user)
     db.session.commit()
     return new_user
@@ -18,12 +18,12 @@ def check_user(email, password):
     return None
 
 
-def get_user_language(email):
+def get_user_userStatus(email):
     user = User.query.filter_by(email=email).first()
-    return user.language
+    return user.userStatus
 
 
 def get_user_role(email):
     user = User.query.filter_by(email=email).first()
-    return user.role
+    return user.userrole
 

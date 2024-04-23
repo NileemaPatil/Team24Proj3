@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from ..services.weather_service import create_weather, get_weather_by_location, get_weather_data
 from ..schemas.weather_schema import weather_schema, weathers_schema
-from ..services.user_service import get_user_language, get_user_role
+from ..services.user_service import get_user_userStatus, get_user_role
 
 weather_blueprint = Blueprint('weather_blueprint', __name__)
 

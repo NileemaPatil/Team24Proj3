@@ -22,7 +22,7 @@ def login_user():
     if user:
         expires = timedelta(minutes=30)
         access_token = create_access_token(identity=data['email'], expires_delta=expires)
-        return jsonify(access_token=access_token, role=user.role), 200
+        return jsonify(access_token=access_token, role=user.userrole), 200
     else:
         return jsonify({"message": "Invalid email or password"}), 401
 

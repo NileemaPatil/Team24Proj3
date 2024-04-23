@@ -6,7 +6,7 @@ from ..services.project_service import create_project, get_projects_by_language,
     get_projects_with_annotation_counts_with_language, get_projects_with_annotation_counts
 from ..schemas.project_schema import project_schema, projects_schema
 from ..services.sentence_service import get_sentences
-from ..services.user_service import get_user_language, get_user_role
+from ..services.user_service import get_user_userStatus, get_user_role
 
 sentence_blueprint = Blueprint('sentence_blueprint', __name__)
 
