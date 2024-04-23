@@ -1,8 +1,8 @@
-    from datetime import timedelta
-    from flask import Blueprint, request, jsonify
-    from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
-    from ..services.user_service import create_user, check_user, get_user, update_user, delete_user
-    from ..schemas.user_schema import user_schema
+from datetime import timedelta
+from flask import Blueprint, request, jsonify
+from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
+from ..services.user_service import create_user, check_user, get_user, update_user, delete_user
+from ..schemas.user_schema import user_schema
 
     user_blueprint = Blueprint('user_blueprint', __name__)
 
