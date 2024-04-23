@@ -33,11 +33,13 @@ def create_app():
         from app.controllers.sentence_controller import sentence_blueprint
         from app.controllers.menu_controller import menu_blueprint
         from app.controllers.cart_controller import cart_blueprint
+        from app.controllers.weather_controller import weather_blueprint
         app.register_blueprint(user_blueprint, url_prefix="/user")
         app.register_blueprint(project_blueprint, url_prefix="/project")
         app.register_blueprint(sentence_blueprint, url_prefix="/sentence")
         app.register_blueprint(menu_blueprint, url_prefix="/menu")
         app.register_blueprint(cart_blueprint, url_prefix="/cart")
+        app.register_blueprint(weather_blueprint, url_prefix="/weather")
 
         db.create_all()
 
