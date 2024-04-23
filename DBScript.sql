@@ -281,3 +281,33 @@ ALTER TABLE IF EXISTS public.users
 
 COMMENT ON CONSTRAINT users_name ON public.users
     IS 'user name should be unique';
+
+-- Table: public.payment
+
+-- DROP TABLE IF EXISTS public.payment;
+
+CREATE TABLE IF NOT EXISTS public.payment
+(
+    paymentid integer NOT NULL DEFAULT nextval('payment_id_seq'::regclass),
+    userid integer,
+    mobileno integer,
+    amount integer,
+    paymentdate time without time zone,
+    bankaccountno integer,
+    bankname character varying(120) COLLATE pg_catalog."default",
+    "FSCIcode" integer,
+    pincode integer,
+    paymentstatus character varying(120) COLLATE pg_catalog."default",
+    updateddate time without time zone,
+    createddate time without time zone,
+    CONSTRAINT payment_pkey PRIMARY KEY (paymentid),
+    CONSTRAINT payment_user_fkey FOREIGN KEY (userid)
+        REFERENCES public.users (userid) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.payment
+    OWNER to postgres;
