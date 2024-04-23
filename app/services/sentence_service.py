@@ -5,5 +5,3 @@ def get_sentences(data):
     project_id = data['project_id']
     sentences = Sentence.query.filter_by(project_id=project_id).all()
     return sentences
-
-
