@@ -3,7 +3,7 @@ from datetime import datetime
 from .. import db
 
 
-class Project(db.Model):
+class Canteen(db.Model):
     __tablename__ = 'canteen'
 
     canteenid = db.Column(db.Integer, primary_key=True)
